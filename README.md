@@ -83,4 +83,107 @@ Ikuti langkah berikut untuk menjalankan aplikasi di laptop Anda.
 
 ```bash
 git clone https://github.com/USERNAME/projek-pwe-biodata.git
-cd projek-pwe-biodata
+```
+
+### **2. Install Dependencies Backend (Laravel / Composer)**
+
+```bash
+composer install
+```
+
+---
+
+### **3. Install Dependencies Frontend (Node / Vite)**
+
+```bash
+npm install
+```
+
+---
+
+### **4. Setup File Environment (.env)**
+
+Copy file `.env.example` menjadi `.env`:
+
+```bash
+cp .env.example .env
+```
+
+Lalu buka file `.env` dan sesuaikan konfigurasi database:
+
+```text
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1
+DB_PORT=3306
+DB_DATABASE=projek_pwe_biodata
+DB_USERNAME=root
+DB_PASSWORD=
+```
+
+---
+
+### **5. Generate Application Key**
+
+```bash
+php artisan key:generate
+```
+
+---
+
+### **6. Migrasi Database**
+
+```bash
+php artisan migrate
+```
+
+---
+
+### **7. Setup Storage (untuk upload foto)**
+
+```bash
+php artisan storage:link
+```
+
+---
+
+### **8. Menjalankan Backend (Laravel)**
+
+```bash
+php artisan serve
+```
+
+Akses backend melalui:
+
+```
+http://127.0.0.1:8000
+```
+
+---
+
+### **9. Menjalankan Frontend (Vite)**
+
+```bash
+npm run dev
+```
+
+---
+
+### **10. Akses Aplikasi**
+
+Buka browser:
+
+```
+http://127.0.0.1:8000
+```
+
+---
+
+##  Fitur Utama Aplikasi
+
+* Edit biodata lengkap
+* Upload foto profil
+* Dynamic Work Experience
+* Dynamic Education
+* Dark mode
+* Tampilan modern Bootstrap 5
+* Data tersimpan ke MySQL
